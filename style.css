@@ -1,0 +1,472 @@
+/*----font----*/
+@font-face {
+    font-family: 'HSSanTokki20-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'YESMyoungjo-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff') format('woff');
+}
+
+/*header{
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+    font-family: 'HSSaemaul-Regular';
+}*/
+
+
+/*----nav----*/
+.nav_container{
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    font-family: 'LeeSeoyun';
+    font-size: 18px;
+
+    text-decoration: none;
+
+    border-bottom: 1.5px solid #0A7448;
+}
+
+.nav_item a{
+    text-decoration-line: none;
+    color: #0A7448;
+}
+
+.nav_logo > a{
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 0 10px 0;
+}
+
+.nav_logo a img{
+    height: 70%;
+}
+
+
+/*----nav.underline----*/
+
+.nav_item a{
+    position: relative;
+}
+.nav_item a::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    border-bottom: 1.5px solid #0A7448;
+
+    transform: scaleX(0);
+    transition: transform 0.5ms;
+}
+
+.nav_item:hover a::after{
+    transform: scale(1);
+}
+
+/*
+.nav_item a{
+    transition: text-shadow .3s;
+}
+
+.nav_item a:hover{
+    text-shadow: 0 2px 8px rgba(42, 225, 152, 0.634);
+}
+*/
+
+
+/*----body----*/
+body{
+    margin: 0px;
+    background-color: #FAF1DB;
+}
+
+
+/*----index_question----*/
+.index_question{
+    font-family: 'HSSanTokki20-Regular';
+    color: #0A7448;
+    font-size: 5vmax;
+
+
+    display: flex;
+    justify-content: center;
+
+    padding: 60px 0 20px 0;
+}
+
+
+/*----choice_index----*/
+.choice_container{
+    width: auto;
+    height: 150px;
+
+    padding-top: 30px;
+    margin: 0 10vw;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 5vh;
+
+    justify-items: center;
+}
+
+.choice_item1{
+    grid-column: 1 / 2;
+}
+
+.choice_item2{
+    grid-column: 3 / 4;
+}
+
+.choice_item3{
+    grid-column: 5 / 6;
+}
+
+.choice_item4{
+    grid-column: 2 / 3;
+}
+
+.choice_item5{
+    grid-column: 4 / 5;
+}
+
+/*----drink----*/
+.drink_container{
+    width: auto;
+    height: 150px;
+    margin: 10vmin 10vw 0 10vw;
+
+    display: grid;
+    grid-template-columns: 40vh auto;
+    grid-template-rows: 15vh auto 30px auto;
+
+    grid-template-areas: 
+    "item1 item2"
+    "item1 item3"
+    "item1 ."
+    "item1 item4";
+}
+
+.drink_item1{
+    grid-area: item1;
+}
+
+.drink_item2{
+    grid-area: item2;
+}
+
+.drink_item3{
+    grid-area: item3;
+}
+
+.drink_item4{
+    grid-area: item4;
+    justify-self: right;
+}
+
+.drink_title{
+    font-family: 'HSSanTokki20-Regular';
+    color: #0A7448;
+    font-size: 6vh;
+}
+
+.drink_content{
+    font-family: 'LeeSeoyun';
+    color: #0A7448;
+    font-size: 3.5vh;
+}
+
+.drink_more{
+    background-color: #0A7448;
+    border-radius: 30px;
+    border: none;
+
+    padding: 15px 20px;
+
+    font-family: 'LeeSeoyun';
+    color: #FAF1DB;
+    font-size: 20px;
+}
+
+/*----sweetener----*/
+.sweetener_container{
+    width: auto;
+    height: 150px;
+    margin: 10vmin 10vw 0 10vw;
+
+    display: grid;
+    grid-template-columns: auto 40vh;
+    grid-template-rows: 10vh 7vh auto 30px auto;
+
+    grid-template-areas: 
+    "item2 item1"
+    "item5 item1"
+    "item3 item1"
+    ". item1"
+    ". item4";
+}
+
+.sweetener_item1{
+    grid-area: item1;
+    justify-self: right;
+}
+
+.sweetener_item2{
+    grid-area: item2;
+}
+
+.sweetener_item3{
+    grid-area: item3;
+}
+
+.sweetener_item4{
+    grid-area: item4;
+    justify-self: right;
+}
+
+.sweetener_item5{
+    grid-area: item5;
+}
+
+.sweetener_title{
+    font-family: 'HSSanTokki20-Regular';
+    color: #0A7448;
+    font-size: 6vh;
+}
+
+.sweetener_num{
+    font-family: 'YESMyoungjo-Regular';
+    color:#0A7448;
+    font-size: 3vh;
+}
+
+.sweetener_content{
+    font-family: 'LeeSeoyun';
+    color: #0A7448;
+    font-size: 3.5vh;
+}
+
+.sweetener_back{
+    background-color: #0A7448;
+    border-radius: 30px;
+    border: none;
+
+    padding: 15px 20px;
+
+    font-family: 'LeeSeoyun';
+    color: #FAF1DB;
+    font-size: 20px;
+}
+
+/*----collection----*/
+.collection1_container{
+    display: grid;
+    grid-template-columns: 20vh auto 20vh auto;
+    grid-template-rows: repeat(5, 5vh 15px auto 10px);
+
+    grid-template-areas: 
+    "item1 item2 item4 item5"
+    "item1 . item4 ."
+    "item1 item3 item4 item6"
+    ". . . ."
+    "item7 item8 item10 item11"
+    "item7 . item10 ."
+    "item7 item9 item10 item12"
+    ". . . ."
+    "item13 item14 . ."
+    "item13 . . ."
+    "item13 item15 . ."
+    ". . . .";
+
+    row-gap: 0.5%;
+    margin: 0 5vw;
+    margin-bottom: 30px;
+}
+
+.collection_item1{
+    grid-area: item1;
+}
+
+.collection_item2{
+    grid-area: item2;
+}
+
+.collection_item3{
+    grid-area: item3;
+}
+
+.collection_item4{
+    grid-area: item4;
+}
+
+.collection_item5{
+    grid-area: item5;
+}
+
+.collection_item6{
+    grid-area: item6;
+}
+
+.collection_item7{
+    grid-area: item7;
+}
+
+.collection_item8{
+    grid-area: item8;
+}
+
+.collection_item9{
+    grid-area: item9;
+}
+
+.collection_item10{
+    grid-area: item10;
+}
+
+.collection_item11{
+    grid-area: item11;
+}
+
+.collection_item12{
+    grid-area: item12;
+}
+
+.collection_item13{
+    grid-area: item13;
+}
+
+.collection_item14{
+    grid-area: item14;
+}
+
+.collection_item15{
+    grid-area: item15;
+}
+
+h1{
+    font-family: 'HSSanTokki20-Regular';
+    color: #0A7448;
+    font-size: 8vh;
+
+    margin: 40px 0 30px 70px;
+}
+
+#img{
+    justify-self: center;
+
+    padding-top: 3vw;
+}
+
+#drink_name{
+    font-family: 'HSSanTokki20-Regular';
+    color: #0A7448;
+    font-size: clamp(15px, 4vw, 30px);
+}
+
+#drink_content{
+    font-family: 'LeeSeoyun';
+    color: #0A7448;
+    font-size: clamp(10px, 3vw, 20px);
+}
+
+.collection2_container{
+    display: grid;
+    grid-template-columns: 1fr 20px 1fr;
+    grid-template-rows: repeat(5, 5vh 5px auto 10px);
+    grid-template-areas:
+    "item16 . item18"
+    ". . ."
+    "item17 . item19"
+    ". . ."
+    "item20 . item22"
+    ". . ."
+    "item21 . item23"
+    ". . ."
+    "item24 . ."
+    "item25 . .";
+
+    row-gap: 0.5%;
+    margin: 0 5vw;
+}
+
+.collection_item16{
+    grid-area: item16;
+}
+
+.collection_item17{
+    grid-area: item17;
+}
+
+.collection_item18{
+    grid-area: item18;
+}
+
+.collection_item19{
+    grid-area: item19;
+}
+
+.collection_item20{
+    grid-area: item20;
+}
+
+.collection_item21{
+    grid-area: item21;
+}
+
+.collection_item22{
+    grid-area: item22;
+}
+
+.collection_item23{
+    grid-area: item23;
+}
+
+.collection_item24{
+    grid-area: item24;
+}
+
+.collection_item25{
+    grid-area: item25;
+}
+
+/*----introduction----*/
+
+.int_logo_container{
+    margin: 40px 0 0 40px;
+
+    display: grid;
+    grid-template-columns: auto auto 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.int_logo{
+    width: clamp(200px, 30vw, 300px);
+}
+
+/*----service----*/
